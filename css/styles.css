@@ -3,7 +3,15 @@
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body{
+    background-image: url("../assets/pkmBg.jpg");
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
 .lista-pokemons{
+    /* conjunto de pokemons */
+    display: flex;
+    justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
@@ -12,27 +20,57 @@
     list-style: none;
 }
 h3{
+    /* config titulo pokedex */
     margin: 50px;
+    margin-top: 0;
+    border-radius: 20px;
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
+    color: white;
+    -webkit-text-stroke: black 1px;
+    font-family: 'Pokemon Solid', sans-serif;
+    letter-spacing: 3px;
 }
 .pokemon{
-    border-radius: 10px;
+    /* config "caixa" do pokemon */
+    border: 1.5px solid black;
+    border-radius: 5px;
+    width: 400px;
+    
+    /* config img do pokemon */
 
     img{
-        width: 80%;
+        width: 380px;
+        height: 200px;
         display: flex;
         justify-self: center;
         align-self: center;
         margin: 10px;
     }
 
+    /* config nome do pokemon */
+
     p{
         text-align: center;
         font-size: 30px;
-        margin: 20px;
+        font-weight: 100;
+        text-transform: capitalize;
+        font-family: 'Pokemon Solid', sans-serif;
+        letter-spacing: 3px;
+        color: white;
+        background-color: black;
     }
 }
+
+/* efeito quando o cursor passa por cima */
+
+li:hover{
+    cursor: pointer;
+    background-image: url("../assets/pkm.jpg");
+    scale: 1.05;
+}
+
+/* cor definida para cada classe de pokemon */
 
 .normal{background-color: #a8a678;}
 .fire{background-color: #f0802f;}
